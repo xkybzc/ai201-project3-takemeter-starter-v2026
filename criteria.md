@@ -54,10 +54,11 @@ whether you hit them:
 ## 1.
 
 <!-- Your criterion. It must name a number. -->
+Overall accuracy is at least 0.70
 
 
-
-**Why this target:**
+**Why this target:** Most post will fit the label, but for mixed posts,
+which contain a fact and 'what if' opinions, will cause some mistake.
 
 
 
@@ -66,11 +67,15 @@ whether you hit them:
 ## 2.
 
 <!-- Your criterion. -->
+`analysis` has an F1 of at least 0.80 and `hot_take` has an F1 of at least
+0.60 on the held-out set.
 
 
 
-**Why this target:**
 
+**Why this target:** A `hot_take` is defined by what it lacks (a fact
+everyone can look up), which is harder for the model to spot.
+Posts that mention stats vaguely, like "did you see his stats?",
 
 
 ---
@@ -78,22 +83,27 @@ whether you hit them:
 ## 3.
 
 <!-- Your criterion. -->
+When the model's confidence is at least 0.8, its predictions are correct at
+least 85% of the time on the held-out set.
 
 
 
-**Why this target:**
 
-
+**Why this target:** I put the model's confidence at 0.80 so it only covers cases where the model is clearly sure.
+I expect the unsure predictions to be the mixed posts so confident predictions should be
+noticeably more accurate than my 0.70 overall target.
 
 ---
 
 ## 4.
 
 <!-- Your criterion. -->
+Neither `analysis` nor `hot_take` makes up more than 60% of `labels.csv`.
 
 
 
-**Why this target:**
+
+**Why this target:** Capping at 60% keeps that guessing baseline clearly below my accuracy target.
 
 
 
@@ -102,11 +112,11 @@ whether you hit them:
 ## 5.
 
 <!-- Your criterion. -->
+When I relabel a random sample of 30 posts, the first labels match at least 26 of 30
 
 
-
-**Why this target:**
-
+**Why this target:** I can't agree with myself on 26/30 of posts, the labels are
+too noisy for the model to learn them, and a model accuracy of 0.70 would mean little.
 
 
 ---

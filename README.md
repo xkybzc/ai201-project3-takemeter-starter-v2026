@@ -81,8 +81,9 @@
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-If the posts contains at least one fact that everyone can look up, it's 'analysis', even
-if it is a 'what if' arguement or insult writing style.
+If the posts contains at least one fact that everyone can look up, it's `analysis`.
+If the number is decoration on a conclusion the writer had already reached, it is a
+`hot_take` with a statistic in it.
 
 
 
