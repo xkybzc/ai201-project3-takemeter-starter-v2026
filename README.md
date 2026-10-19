@@ -41,7 +41,10 @@
 
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
-
+TakeMeter is a classifier for text posts from r/nba, a public subreddit
+about the NBA. It reads a post and sorts it into one of two labels: `fact`,
+for a post that contains at least one fact anyone can look up, or
+`hot_take`, for a post that makes a claim without such a fact.
 
 
 ---
@@ -138,15 +141,22 @@ I lable the first 15 by myself, than I use Copilot to do the rest.
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** distilbert-base-uncased
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** <!-- epochs, learning rate, batch size, seed --> 3 epochs, learning rate 2e-5, batch size 16, max length 128
+tokens, seed 42.
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** Nothing
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Split sizes:** <!-- train / val / test, and per-label counts in the test split. If a label had fewer than about 8 in test, say so — it explains a lot of next unit's variance. -->
+
+70/15/15 stratified split.
+Train 139 / validation 31 / test 30.
+
+| label | train | val | test |
+|---|---|---|---|
+| fact | 79 | 18 | 17 |
+| hot_take | 60 | 13 | 13 |
 
 
 
@@ -163,17 +173,20 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked Claude to help me writing criterion 3, criteria 4 and 5.
+- *What came back:* Claude give some advice on adjusting the number.
+- *What I changed:* I change the number in those 3 criteria.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Training crashed in section 4 with a ValueError
+- *What came back:* Claude return that labels in my CSV that don't match my
+  label map turn into NaN
+- *What I changed:* I change my labels cause my in labels.csv I put `fact` while in the notebook I put `facts`
 
-**Pre-labelling disclosure:**
+**Pre-labelling disclosure:**I labeled 15 posts myself with no AI help
+(marked `cold` in the `note` column). I then had Microsoft Copilot pre-label
+the remaining 185 posts, using my label definitions and decision rule.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
