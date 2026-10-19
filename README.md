@@ -54,33 +54,35 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `analysis`
 
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
+**Definition:** a post that contains at least one fact that everyone can look up.
 
 **Example 1:**
->
+>The source for all this data is basketball reference. Data is for the past 4 seasons + current one (2019-2020 through today) Insights:- Sixers win 62% of home games Embiid sits (16-10), but win 44% of road games Embiid sits (22-28)- This is extremely exaggerated when Embiid sits vs. top 10 teams (Sixers are 4-15 on road vs. Top 10 teams when Embiid sits)- Sixers play .500 ball vs. top 10 teams at Home with Embiid sitting (5-5 record) If Embiid decides to sit less road games (his personal stats would suffer a bit), his TEAM would perform better record wise. His team has shown they can win vs. bad teams AND great teams at home, but cannot replicate the success on the road (this is not unusual - role players play worse on the road in most cases).
 
 **Example 2:**
->
+>So there's been lots of talk lately about how high offensive stats have gotten now, especially for the top tier, and how it's hard to directly compare them to the past. But how would stats look if you adjust them for that purpose? I chose 2015/16 as the year because it's a more neutral environment where efficiency had clearly risen from 2000s levels but hadn't exploded yet, plus it's a good year to use to compare to the LeBron/Steph/KD generation. Without further ado..... In 2025/26, the NBA scores 115.7 points per 100 possessions on exactly 100.0 possessions a game. The league average TS% is 58.3%. Meanwhile, in 2015/16, the league scored 106.4 points per 100 possessions on 95.7 possessions a game. The league average TS% was 54.1%. With this in mind, the following adjustments will be made: For PPG and APG: Multiply by 0.88 (the product of the points per 100 gap and the possessions per game gap) For RPG: Just multiply by 0.957 (the pace ratio only, more missed shots can mean more rebounds so increased scoring doesn't necessarily inflate this) For TS%: Multiply by 0.928 (the ratio of 54.1% compared to 58.3%) So what are the results?Adj. PPG	Adj. RPG	Adj. APG	Adj. TS% Jokic	26.0	11.8	9.6	66.4% SGA	28.5	4.5	5.6	63.4% Luka	31.0	8.4	8.0	56.7% Overall, this is a pretty crude method, but I do think these adjustments are significantly useful. For example, it illustrates that Jokic's scoring efficiency and Luka's scoring volume are legitimately all-time levels, but Jokic's scoring volume and Luka's scoring efficiency are good but not quite up there in full context (SGA being in the middle of the two.)
+
+### `hot_take`
+
+**Definition:** a post that makes a claim but does not contain fact that everyone can look up.
+
+**Example 1:**
+>My hot take: Wilt is undebatable top-3. Did you see his stats? He was the best in the offense and in the defense. People say he wouldn't be so good in our time. But he was actually so fast that he would easily guard the perimeter in our time.
+
+**Example 2:**
+>Shaq is top 5 all time
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** 'hot_take' and 'analysis'
 
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
+If the posts contains at least one fact that everyone can look up, it's 'analysis', even
+if it is a 'what if' arguement or insult writing style.
 
 
 
