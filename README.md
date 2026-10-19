@@ -54,7 +54,7 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `analysis`
+### `facts`
 
 **Definition:** a post that contains at least one fact that everyone can look up.
 
@@ -81,7 +81,7 @@
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-If the posts contains at least one fact that everyone can look up, it's `analysis`.
+If the posts contains at least one fact that everyone can look up, it's `fact`.
 If the number is decoration on a conclusion the writer had already reached, it is a
 `hot_take` with a statistic in it.
 
@@ -94,19 +94,17 @@ If the number is decoration on a conclusion the writer had already reached, it i
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** r/nba (subreddit about NBA)
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
-
+**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected? Say so plainly — the disclosure is required, not penalised. -->
+I lable the first 15 by myself, than I use Copilot to do the rest.
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| fact | 113 | 56.8% |
+| hot_take | 87 | 43.2% |
+| **Total** | 200 | 100% |
 
 **Three hard cases**
 
@@ -114,25 +112,25 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* "Jayson Tatum is your 2023-24 NBA MVP."
 >
-> *Could have been:*
+> *Could have been:* fact or hot_take
 >
-> *I chose, because:*
+> *I chose, because:* hot_take, because Jayson Tatum is not 2023-2024 NBA MVP
 
 **2.**
-> *The post:*
+> *The post:* Kyrie Irvin hit the game-winning 3-pointer over Stephen Curry in Game 7 of the 2016 NBA Finals.
 >
-> *Could have been:*
+> *Could have been:* fact or hot_take
 >
-> *I chose, because:*
+> *I chose, because:* fact, because it did happen in that game
 
 **3.**
-> *The post:*
+> *The post:* Dirk Nowitzk is the highest-scoring European-born player in NBA history with 31560 regular-season points.
 >
-> *Could have been:*
+> *Could have been:* fact or hot_take
 >
-> *I chose, because:*
+> *I chose, because:* fact, because it contain a fact.
 
 ---
 
