@@ -202,18 +202,22 @@ the remaining 185 posts, using my label definitions and decision rule.
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.567 | 0.833 | +0.267 |
+| Macro F1 | 0.362 | 0.824 | +0.462 |
+| F1 — `fact` | 0.723 | 0.865 | +0.141 |
+| F1 — `hot_take` | 0.000 | 0.783 | +0.783 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+     I think the model will beat the baseline on
+
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
+     The trained model beat the baseline on every measure. Most of the gain was hot_take, because the baseline never chose it at all.
+     This tells me my written definitions were too broad. While My labeled examples showed a narrower meaning of “fact”.
 
 
 
@@ -232,6 +236,13 @@ the remaining 185 posts, using my label definitions and decision rule.
 | 4.  |  |  |  |  |  |
 | 5.  |  |  |  |  |  |
 
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.833 | 0.800 | 0.767 | 0.067 |
+| Macro F1 | 0.824 | 0.775 | 0.744 | 0.080 |
+| F1 — `fact` | 0.865 | 0.850 | 0.821 | 0.044 |
+| F1 — `hot_take` | 0.783 | 0.700 | 0.667 | 0.116 |
+
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
@@ -239,9 +250,10 @@ the remaining 185 posts, using my label definitions and decision rule.
 
 | true \ predicted |  |  |  |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | fact | hot_take |
+|---|---|---|
+| **fact** | 16 | 1 |
+| **hot_take** | 4 | 9 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which

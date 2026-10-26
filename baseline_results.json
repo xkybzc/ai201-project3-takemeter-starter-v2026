@@ -1,0 +1,178 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.5666666666666667,
+    "f1_macro": 0.36170212765957444,
+    "per_label": {
+      "fact": {
+        "precision": 0.5666666666666667,
+        "recall": 1.0,
+        "f1": 0.7234042553191489,
+        "support": 17
+      },
+      "hot_take": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "Larry Bir won three consecutive 3-Point Contests from 1986 to 1988.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Modern NBA offense is less entertaining to watch than mid-2000s ISO ball because every team plays identically.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Bam Adebay is the most versatile defender in the league.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Rasheed Wallace played exactly one game for the Atlanta Hawks in 2003\u201304 before being traded to the Detroit Pistons where he won the championship that same season.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Dirk Nowitzk is the highest-scoring European-born player in NBA history with 31560 regular-season points.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Nikola Joki recorded the fastest triple-double in NBA history taking 14 minutes and 33 seconds against the Bucks in 2018.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Devin Booke is the most complete traditional shooting guard playing today.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Jamal Crawfor is the oldest player in NBA history to score 50+ points in a game (40 years 3 days old).",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Klay Thompso holds the record for most 3-pointers made in a single regular-season game with 14.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Giannis Antetokounmp was selected 15th overall in the 2013 NBA Draft by the Milwaukee Bucks.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "The2016 Cleveland Cavalier championship is more impressive than any title won during the Golden State Warriors dynasty.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Jerry Wes is the only player in NBA history to win Finals MVP while playing for the losing team (1969 NBA Finals).",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Dame wins MVP after leading Toronto to the 2nd seed",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Heliocentric offensive systems (like Harden or Luka) cannot win a championship without a high-level secondary playmaker.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Paolo Bancher will lead his franchise to a championship before any other 2020s top draft pick wins one.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "TheMemphis Grizzlie beat the Oklahoma City Thunder by 73 points (152\u201379) on Dec 2 2021 the largest margin of victory in NBA history.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Tyrese Haliburto is a modern-day Steve Nash with a superior pull-up jumper.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Ray Alle hit his famous game-tying 3-pointer in Game 6 of the 2013 NBA Finals without looking down at the floor to locate the line.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Stephen Curr hit 13 three-pointers against the New Orleans Pelicans in November 2016 setting a single-game record at the time.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Marcus Smar in 2022 became the first guard to win Defensive Player of the Year since Gary Payton in 1996.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Goaltending in basketball was legal until 1944 because nobody actually tried to do it until then",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Klay Thompson' 37-point quarter is a more impressive single-game feat than Devin Booker's 70-point game.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "MJ 1989 is the GOAT regular season",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "TheToronto Raptor were the first non-US-based team to win an NBA Championship (2019).",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "James Harde has drawn more 3-point shooting fouls than any team in NBA history since 2010.",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Michael Jorda holds the highest career regular-season scoring average in NBA history at 30.12 points per game edging out Wilt Chamberlain (30.07).",
+      "gold": "fact",
+      "predicted": "fact"
+    },
+    {
+      "text": "Derrick Whit is a top-5 high-impact guard in the NBA despite low PPG averages.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Scottie Barne has the potential to be a 5-position defender and primary playmaker.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Coby White' breakout proves player development pathways require patience beyond year three.",
+      "gold": "hot_take",
+      "predicted": "fact"
+    },
+    {
+      "text": "Domantas Saboni recorded 61 consecutive double-doubles during the 2023\u201324 season the longest streak since the ABA-NBA merger.",
+      "gold": "fact",
+      "predicted": "fact"
+    }
+  ]
+}

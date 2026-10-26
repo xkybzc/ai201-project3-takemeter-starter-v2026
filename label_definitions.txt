@@ -5,5 +5,5 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: a post that contains at least one fact that everyone can look up.
-hot_take: a post that makes a claim but does not contain fact that everyone can look up.
+fact: a post that contains at least one fact that everyone can look up
+hot_take: a post that makes a claim but does not contain fact that everyone can look up
