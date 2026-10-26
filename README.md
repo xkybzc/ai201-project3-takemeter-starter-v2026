@@ -348,24 +348,26 @@ confidence.
 
 ## The Improvement
 
-**What I changed:**
+**What I changed:** Added 30 'hot_take' posts.
 
-**Which diagnosis pointed at it:**
+**Which diagnosis pointed at it:** the lean toward 'fact'
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.70 | 0.857 | 1.000 | 0.800 | MET |
+| 2. Every label F1 | `fact` ≥ 0.80 and `hot_take` ≥ 0.60 | 0.865 / 0.848 | 1.000 / 1.000 | 0.811 / 0.788 | MET |
+| 3. Confidence | ≥ 85% correct when confidence ≥ 0.80 | not reported | not reported | not reported | COULD NOT BE MEASURED |
+| 4. Balance | No label above 60% of `labels.csv` | 0.50 | 0.50 | 0.50 | MET |
+| 5. Consistency (agreement with staff, 30 posts) | ≥ 0.867 | 1.00 | 1.00 | 1.00 | MET |
+
 
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
+     
 
 
 
@@ -377,10 +379,10 @@ confidence.
 
 
 
+
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
-
 
 
 <!-- ═════════════════════════════════════════════════════════════════════
