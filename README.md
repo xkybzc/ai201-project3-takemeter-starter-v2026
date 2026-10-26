@@ -248,10 +248,8 @@ the remaining 185 posts, using my label definitions and decision rule.
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
 | true \ predicted | fact | hot_take |
-|---|---|---|
+|---|---|---|---|
 | **fact** | 16 | 1 |
 | **hot_take** | 4 | 9 |
 
@@ -259,7 +257,8 @@ the remaining 185 posts, using my label definitions and decision rule.
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
-
+     4 real 'hot_take' posts were called 'fact', only 1 went the other way, so the model leans toward fact on the boundary.
+     I think it because fact has more posts, so when the model is unsure, it guess fact
 
 
 ---
@@ -300,7 +299,7 @@ the remaining 185 posts, using my label definitions and decision rule.
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 30 / 30 = 100%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
