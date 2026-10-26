@@ -230,11 +230,11 @@ the remaining 185 posts, using my label definitions and decision rule.
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.70 | 0.833 | 0.800 | 0.767 | MET |
+| 2. Every label F1 | `fact` ≥ 0.80 and `hot_take` ≥ 0.60 | 0.865 / 0.783 | 0.850 / 0.700 | 0.821 / 0.667 | MET |
+| 3. Confidence | ≥ 85% correct when confidence ≥ 0.80 | not reported | not reported | not reported | COULD NOT BE MEASURED |
+| 4. Balance | No label above 60% of `labels.csv` | 0.57 | 0.57 | 0.57 | MET |
+| 5. Consistency | ≥ 0.867 | 1.00 | 1.00 | 1.00 | MET |
 
 | Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
 |---|---|---|---|---|
@@ -270,12 +270,11 @@ the remaining 185 posts, using my label definitions and decision rule.
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
-
+| 1 | Overall accuracy | ≥ 0.70 | MET | above 0.70 on all three seeds. |
+| 2 | Every label F1 | `fact` ≥ 0.80 and `hot_take` ≥ 0.60 | MET | Lowest `fact` F1 was 0.821 and lowest `hot_take` F1 was 0.667, both on seed 2024. |
+| 3 | Confidence | ≥ 85% correct when confidence ≥ 0.80 | COULD NOT BE MEASURED | The notebook reports accuracy by confidence thirds, not above a fixed threshold.|
+| 4 | Balance | No label above 60% of `labels.csv` | MET | 114 `fact` / 86 `hot_take` |
+| 5 | Consistency | ≥ 0.867 agreement with staff | MET | 30 / 30 = 1.00 in `agreement_results.json`. |
 **Diagnoses**
 
 <!-- For each miss: the cause, and how you know. The four common causes are:
@@ -287,6 +286,8 @@ the remaining 185 posts, using my label definitions and decision rule.
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
 
+**Criterion 3 (could not be measured):** the 0.80 threshold sat above the model's usual
+confidence.
 
 
 ---
