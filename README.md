@@ -184,6 +184,24 @@ Train 139 / validation 31 / test 30.
   label map turn into NaN
 - *What I changed:* I change my labels cause my in labels.csv I put `fact` while in the notebook I put `facts`
 
+**Moment 3**
+
+- *What I asked for:* I asked Claude why my baseline scored 0.000 F1 on
+  `hot_take`.
+- *What came back:* It worked out from the numbers that the baseline had
+  labelled every post `fact`, and suggested my written definition =
+- *What I changed:* I fixed the label name to match `labels.csv` and re-ran the
+  baseline.
+
+**Moment 4**
+
+- *What I asked for:* I asked Claude to check my first Run Log — Before table.
+- *What came back:* It pointed out that my verdicts is wrong.
+- *What I changed:* I replaced the copied numbers with my real ones from
+  `results_three_seeds_before.json`, `agreement_results.json` and `labels.csv`,
+  corrected the verdicts, and added a revision to criterion 3 in `criteria.md`
+  instead of deleting it.
+
 **Pre-labelling disclosure:**I labeled 15 posts myself with no AI help
 (marked `cold` in the `note` column). I then had Microsoft Copilot pre-label
 the remaining 185 posts, using my label definitions and decision rule.
@@ -367,7 +385,8 @@ confidence.
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
-     
+     No. The model still leans toward `fact`: on seed 42, 4 `hot_take` posts were called `fact` and only
+     1 went the other way, the same as before.
 
 
 
@@ -376,14 +395,15 @@ confidence.
 ## What's Still Broken
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
-
+**Criterion 3 couldn't be measured.**
 
 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
-
+I meant fact to capture posts that contain a fact everyone can look up, but the model seems to have learned that non-checkable fact also means fact.
+The 4 hot_take posts it called fact were probably ones that has a hard fact to check.
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
